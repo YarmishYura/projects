@@ -123,6 +123,7 @@ public class BaseTest implements ITest {
         };
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Constants.ELEMENT_TIMEOUT_SECONDS, TimeUnit.SECONDS);
+        driver.get(Constants.BASE_URL);
     }
 
 
