@@ -61,5 +61,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="Check the possibility to create entity without filling in the required data" classname="net.test.FirstTest" time="23.495"/>
+  <testcase name="Check the possibility to create entity without filling in the required data" classname="net.test.CreateEntityTest" time="23.495"/>
 </testsuite>

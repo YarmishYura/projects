@@ -2,10 +2,12 @@ package com.test.pages;
 
 
 import com.test.base.BasePage;
-import com.test.locators.CSS;
-import com.test.locators.ID;
-import com.test.locators.Locator;
-import com.test.locators.XPath;
+import com.test.base.BaseTest;
+import com.test.locators.*;
+import org.openqa.selenium.WebElement;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class LoginPage extends BasePage {
 /*
@@ -37,52 +39,121 @@ public class LoginPage extends BasePage {
         return isElementVisible(userName);
     }
 */
-
+    Locator submitButton = new ID("FSsubmit");
+    Locator hintMessage = new ClassName("invalid_message");
+    Locator entityTypeField = new ID("RESULT_RadioButton-1");
     Locator entityNameField = new ID("RESULT_TextField-2");
-    Locator blackboxNameField = new ID("//*[@id=\"RESULT_TextField-4\"]");
-    Locator privateButton = new ID("//*[@id=\"RESULT_CheckBox-3_0\"]");
-    Locator submitButton = new ID("//*[@id=\"FSsubmit\"]");
-    Locator entityTypeButton = new ID("//*[@id=\"RESULT_RadioButton-1\"]");
-    Locator reportButton = new ID("//*[@id=\"FSForm\"]/div[2]/div[10]/a[2]");
-    Locator formsiteButton = new ID("//*[@id=\"FSForm\"]/div[2]/div[10]/a[1]");
-    Locator selector = new ID("RESULT_RadioButton-1");
     Locator privateOption = new ID("RESULT_CheckBox-3_0");
+    Locator blackboxNameField = new ID("RESULT_TextField-4");
+    Locator entityTypeServer = new XPath("//*[@id=\"RESULT_RadioButton-1\"]/option[3]");
+    Locator entityTypeDatabase = new XPath("//*[@id=\"RESULT_RadioButton-1\"]/option[4]");
+    Locator entityTypeApplication = new XPath("//*[@id=\"RESULT_RadioButton-1\"]/option[5]");
+    Locator entityTypeHardware = new XPath("//*[@id=\"RESULT_RadioButton-1\"]/option[6]");
+    Locator entityTypeBusinessProcess = new XPath("//*[@id=\"RESULT_RadioButton-1\"]/option[2]");
+//    Locator reportButton = new ID("//*[@id=\"FSForm\"]/div[2]/div[10]/a[2]");
+//    Locator formsiteButton = new ID("//*[@id=\"FSForm\"]/div[2]/div[10]/a[1]");
+//
 
-    public void setEntityName(String entityName){
-        waitForElementVisibility(entityNameField);
-//        click("Click 'Entity Name Field' button", entityNameField);
-//        selectDropDownListOptionByText("Select ' " + entityName + "'", entityName, );
-//        type("Set ' " + entityName + "'", entityName, entityNameField);
-    }
-
-    public void setBlackboxName(String blackboxName){
-        waitForElementToBeClickable(blackboxNameField);
-//        type("Set ' " + blackboxName + "'", blackboxName, blackboxNameField);
-    }
-
-    public void clickPrivateButton(){
-        waitForElementToBeClickable(privateButton);
-        click("Click 'Private' button", privateButton);
-    }
 
     public void clickSubmitButton(){
         waitForElementToBeClickable(submitButton);
         click("Click 'Submit' button", submitButton);
     }
 
-    public void clickReportButton(){
-        waitForElementToBeClickable(reportButton);
-        click("Click 'Submit' button", reportButton);
+    public String getHintMessage() {
+        return getElementText("getting hint", hintMessage);
     }
 
-    public void clickFormsiteButton(){
-        waitForElementToBeClickable(formsiteButton);
-        click("Click 'Submit' button", formsiteButton);
+    public void clickEntityTypeField(){
+        waitForElementToBeClickable(entityTypeField);
+        click("Click 'EntityTypeField'", entityTypeField);
     }
 
-    public boolean isPrivateOpionChecked(){
-        return isCheckboxChecked(privateOption);
+    public List getListEntityType(List list){
+        return list = getDropDownListItemsValueTexts("get list", entityTypeField);
     }
+
+    public void clickEntityNameFields(){
+        waitForElementToBeClickable(entityNameField);
+        click("Click EntityNameField", entityNameField);
+    }
+
+    public void typeTextEntityName(String entityName ){
+        waitForElementToBeClickable(entityNameField);
+        //String string = "Element Present";
+        type("write string", entityName, entityNameField);
+    }
+
+    public void selectRandomListElement(){
+        waitForElementToBeClickable(entityTypeField);
+        selectDropDownListRandomOption("select random element", entityTypeField);
+    }
+
+    public void clickPrivateButton(){
+        waitForElementToBeClickable(privateOption);
+        click("Click private button", privateOption);
+    }
+
+    public void typeTextBlackBoxName(String blackBoxName){
+        waitForElementToBeClickable(blackboxNameField);
+        //String string = "BlackBox Element Present";
+        type("write string", blackBoxName, blackboxNameField);
+    }
+
+    public void clickEntityTypeServer(){
+        waitForElementToBeClickable(entityTypeServer);
+        click("click entity type element server", entityTypeServer);
+    }
+
+    public void clickEntityTypeDatabase(){
+        waitForElementToBeClickable(entityTypeDatabase);
+        click("click entity type element database", entityTypeDatabase);
+    }
+
+    public void clickEntityTypeApplication(){
+        waitForElementToBeClickable(entityTypeApplication);
+        click("click entity type element server", entityTypeApplication);
+    }
+
+    public void clickEntityTypeHardware(){
+        waitForElementToBeClickable(entityTypeHardware);
+        click("click entity type element hardware", entityTypeHardware);
+    }
+
+    public void clickEntityTypeBusinessProcess(){
+        waitForElementToBeClickable(entityTypeBusinessProcess);
+        click("click entity type element hardware", entityTypeBusinessProcess);
+    }
+
+
+    // public void clickEntityTypeButton(){
+        //click("click submitbutton", submitButton);
+    //}
+//    public void setEntityName(String entityName){
+//        waitForElementVisibility(entityNameField);
+//        click("Click 'Entity Name Field' button", entityNameField);
+//        type("Set ' " + entityName + "'", entityName, entityNameField);
+//
+//    }
+
+//    public void setBlackboxName(String blackboxName){
+//        waitForElementToBeClickable(blackboxNameField);
+//        type("Set ' " + blackboxName + "'", blackboxName, blackboxNameField);
+//    }
+
+//    public void clickReportButton(){
+//        waitForElementToBeClickable(reportButton);
+//        click("Click 'Submit' button", reportButton);
+//    }
+
+//    public void clickFormsiteButton(){
+//    waitForElementToBeClickable(formsiteButton);
+//    click("Click 'Submit' button", formsiteButton);
+//    }
+
+//    public boolean isPrivateOpionChecked(){
+//        return isCheckboxChecked(privateOption);
+//    }
 
 
 

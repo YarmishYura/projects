@@ -11,7 +11,7 @@
 
     <properties>
         <browser>chrome</browser>
-        <baseurl>https://www.google.com.ua/</baseurl>
+        <baseurl>https://fs8.formsite.com/zrkvud/rm3c3kncyw/index.html?1547751983976/</baseurl>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <src.dir>${basedir}${file.separator}src${file.separator}main${file.separator}java</src.dir>
         <path.to.driver>${basedir}${file.separator}lib${file.separator}driver</path.to.driver>
@@ -196,5 +196,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
 </project>

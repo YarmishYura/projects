@@ -4,7 +4,7 @@
 
     <test name="Check main page">
         <classes>
-            <class name="net.test.FirstTest"/>
+            <class name="net.test.CreateEntityTest"/>
         </classes>
     </test>
 

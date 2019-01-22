@@ -13,6 +13,4 @@ public class Constants {
     public static final int ELEMENT_MICRO_TIMEOUT_SECONDS = 2;
 
     public static String BASE_URL = System.getProperty("baseurl");
-
-
 }
