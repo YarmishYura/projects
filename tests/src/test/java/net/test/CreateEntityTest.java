@@ -1,32 +1,26 @@
 package net.test;
 
-import com.test.base.BasePage;
 import com.test.base.BaseTest;
-import com.test.pages.LoginPage;
 import com.test.pages.Pages;
-import com.test.util.Constants;
 import com.test.util.Random;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.List;
 
 public class CreateEntityTest extends BaseTest {
-    private BasePage basePage = new BasePage();
-    private LoginPage loginPage = new LoginPage();
     private List<String> expectedOptions = Arrays.asList("", "Business Process", "Server", "Database", "Application", "Hardware");
 
     @Test(testName = "Check the possibility to create entity without filling in the required data")
     public void createEntityWithoutData() {
         Pages.loginPage().clickSubmitButton();
-        Assert.assertEquals(loginPage.getHintMessage(), "Please review the form and correct the highlighted items.");
+        Assert.assertEquals(Pages.loginPage().getHintMessage(), "Please review the form and correct the highlighted items.");
     }
 
     @Test(testName = "Check the possibility of choosing in the Entity Type dropdown  box")
     public void checkThePossibilityOfChoosingEntityType() {
         Pages.loginPage().clickEntityTypeField();
-        Assert.assertEquals(loginPage.getListEntityType(), expectedOptions);
+        Assert.assertEquals(Pages.loginPage().getListEntityType(), expectedOptions);
     }
 
     @Test(testName = "Check the possibility of choosing the Server item of the Entity Type dropdown box")
