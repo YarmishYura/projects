@@ -146,7 +146,7 @@ public class BaseTest implements ITest {
     }
 
 
-    @BeforeClass
+    @BeforeMethod
     public void startBrowser() throws IOException {
 
         String message = "* Starting test " + this.getClass().toString();
@@ -176,7 +176,7 @@ public class BaseTest implements ITest {
         Reporter.log("Current window size is: " + driver.manage().window().getSize());
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         Reporter.log("Stopping WebDriver");
         closeBrowser();

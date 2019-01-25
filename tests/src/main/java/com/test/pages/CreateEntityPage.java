@@ -5,9 +5,9 @@ import com.test.locators.*;
 
 import java.util.List;
 
-public class LoginPage extends BasePage {
+public class CreateEntityPage extends BasePage {
     private Locator submitButton = new ID("FSsubmit");
-    private Locator hintMessage = new ClassName("invalid_message");
+    private Locator errorMessage = new ClassName("invalid_message");
     private Locator entityTypeField = new ID("RESULT_RadioButton-1");
     private Locator entityNameField = new ID("RESULT_TextField-2");
     private Locator privateOption = new ID("RESULT_CheckBox-3_0");
@@ -23,17 +23,17 @@ public class LoginPage extends BasePage {
         click("Click 'Submit' button", submitButton);
     }
 
-    public String getHintMessage() {
-        return getElementText("getting hint", hintMessage);
+    public String getErrorMessage() {
+        return getElementText("Get error message text", errorMessage);
     }
 
     public void clickEntityTypeField() {
         waitForElementToBeClickable(entityTypeField);
-        click("Click 'EntityTypeField'", entityTypeField);
+        click("Click 'Entity Type'", entityTypeField);
     }
 
     public List getListEntityType() {
-        return getDropDownListItemsValueTexts("get list", entityTypeField);
+        return getDropDownListItemsValueTexts("Get list of entity type", entityTypeField);
     }
 
     public void clickEntityNameFields() {
@@ -43,12 +43,12 @@ public class LoginPage extends BasePage {
 
     public void typeTextEntityName(String entityName) {
         waitForElementToBeClickable(entityNameField);
-        type("write string", entityName, entityNameField);
+        type("Set entity name:" + entityName, entityName, entityNameField);
     }
 
     public void selectRandomListElement() {
         waitForElementToBeClickable(entityTypeField);
-        selectDropDownListRandomOption("select random element", entityTypeField);
+        selectDropDownListRandomOption("Select random entity type", entityTypeField);
     }
 
     public void clickPrivateButton() {
@@ -58,31 +58,31 @@ public class LoginPage extends BasePage {
 
     public void typeTextBlackBoxName(String blackBoxName) {
         waitForElementToBeClickable(blackboxNameField);
-        type("write string", blackBoxName, blackboxNameField);
+        type("Set blackbox name: " + blackBoxName, blackBoxName, blackboxNameField);
     }
 
     public void clickEntityTypeServer() {
         waitForElementToBeClickable(entityTypeServer);
-        click("click entity type element server", entityTypeServer);
+        click("Click entity type element server", entityTypeServer);
     }
 
     public void clickEntityTypeDatabase() {
         waitForElementToBeClickable(entityTypeDatabase);
-        click("click entity type element database", entityTypeDatabase);
+        click("Click entity type element database", entityTypeDatabase);
     }
 
     public void clickEntityTypeApplication() {
         waitForElementToBeClickable(entityTypeApplication);
-        click("click entity type element server", entityTypeApplication);
+        click("Click entity type element server", entityTypeApplication);
     }
 
     public void clickEntityTypeHardware() {
         waitForElementToBeClickable(entityTypeHardware);
-        click("click entity type element hardware", entityTypeHardware);
+        click("Click entity type element hardware", entityTypeHardware);
     }
 
     public void clickEntityTypeBusinessProcess() {
         waitForElementToBeClickable(entityTypeBusinessProcess);
-        click("click entity type element hardware", entityTypeBusinessProcess);
+        click("Click entity type element hardware", entityTypeBusinessProcess);
     }
 }

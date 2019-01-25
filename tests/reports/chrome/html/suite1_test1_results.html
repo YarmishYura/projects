@@ -12,7 +12,7 @@
 <body>
 <h1>Check main page</h1>
 <p>
-  Test duration: 50.047s
+  Test duration: 130,293s
 </p>
 
 
@@ -27,15 +27,307 @@
             
 <tr>
   <td class="method">
-                  Check the possibility to create entity without filling in the required data
+                  CE-1 Check the possibility to create entity without filling in the required data
       </td>
   <td class="duration">
-    23.459s
+    1,232s
   </td>
   <td class="result">
         
     
+            <div class="testOutput">
+                        [18:02:57:676]: Click 'Submit' button<br/>
+
+                                [18:02:58:597]: Get error message text<br/>
+
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CE-10 Check if a warning is displayed when you leave the Blackbox Name field empty after selecting  the Private check box
+      </td>
+  <td class="duration">
+    4,961s
+  </td>
+  <td class="result">
         
+    
+            <div class="testOutput">
+                        [18:04:00:726]: Click private button<br/>
+
+                                [18:04:01:080]: Set entity name:test<br/>
+
+                                [18:04:01:457]: Select random entity type<br/>
+
+                                [18:04:01:827]: Click 'Submit' button<br/>
+
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CE-11 Check if the field Blackbox works correctly if the Private box is checked
+      </td>
+  <td class="duration">
+    4,735s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        [18:03:37:098]: Click private button<br/>
+
+                                [18:03:37:470]: Set blackbox name: test<br/>
+
+                                [18:03:37:837]: Set entity name:test<br/>
+
+                                [18:03:38:169]: Select random entity type<br/>
+
+                                [18:03:38:550]: Click 'Submit' button<br/>
+
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CE-12 Check if a warning is displayed if you exceed the maximum number of characters allowed in the Blackbox Name field
+      </td>
+  <td class="duration">
+    2,532s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        [18:03:04:675]: Click private button<br/>
+
+                                [18:03:05:051]: Set blackbox name: wulguqfgmnwbxdnoegpsmndvlstojsokfxqjreirbnjtxrvneewvodourmincjggkdtlkhcscehjjawquhxktmernfrvualdepsxmfsfhosauokhokrsohkgdansuvxibashnfqoipprueoduifcmgudpmcpqtmqoxqrworwqdgjhjefknjspaokhutqikksctgifhgqvevatdgpwddtqfkfqcprqbkllpadrfhhwhebvsccqslvaowqhepjibnabibngnnsbhtksh<br/>
+
+                                [18:03:06:223]: Click 'Submit' button<br/>
+
+                                [18:03:06:858]: Get error message text<br/>
+
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CE-13 Check the possibility to create entity if you fill valid data in all required fields
+      </td>
+  <td class="duration">
+    6,670s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        [18:03:48:546]: Select random entity type<br/>
+
+                                [18:03:49:034]: Set blackbox name: test<br/>
+
+                                [18:03:49:452]: Click private button<br/>
+
+                                [18:03:49:867]: Set entity name:test<br/>
+
+                                [18:03:50:227]: Click 'Submit' button<br/>
+
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CE-2 Check the possibility of choosing in the Entity Type dropdown  box
+      </td>
+  <td class="duration">
+    0,554s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        [18:02:51:630]: Click 'Entity Type'<br/>
+
+                                [18:02:51:720]: Get list of entity type<br/>
+
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CE-3 Check the possibility of choosing the Server item of the Entity Type dropdown box
+      </td>
+  <td class="duration">
+    5,218s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        [18:02:40:913]: Click 'Entity Type'<br/>
+
+                                [18:02:41:293]: Click entity type element server<br/>
+
+                                [18:02:41:606]: Set entity name:test<br/>
+
+                                [18:02:41:965]: Click 'Submit' button<br/>
+
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CE-4 Check the possibility of choosing the Database item of the Entity Type dropdown box
+      </td>
+  <td class="duration">
+    3,322s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        [18:02:22:159]: Click 'Entity Type'<br/>
+
+                                [18:02:22:525]: Click entity type element database<br/>
+
+                                [18:02:22:878]: Set entity name:test<br/>
+
+                                [18:02:23:258]: Click 'Submit' button<br/>
+
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CE-5 Check the possibility of choosing the Application item of the Entity Type dropdown box
+      </td>
+  <td class="duration">
+    5,847s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        [18:02:01:466]: Click 'Entity Type'<br/>
+
+                                [18:02:01:848]: Click entity type element server<br/>
+
+                                [18:02:02:169]: Set entity name:test<br/>
+
+                                [18:02:02:543]: Click 'Submit' button<br/>
+
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CE-6 Check the possibility of choosing the Hardware item of the Entity Type dropdown box
+      </td>
+  <td class="duration">
+    3,693s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        [18:02:30:594]: Click 'Entity Type'<br/>
+
+                                [18:02:30:970]: Click entity type element hardware<br/>
+
+                                [18:02:31:278]: Set entity name:test<br/>
+
+                                [18:02:31:619]: Click 'Submit' button<br/>
+
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CE-7 Check the possibility of choosing the Business Process item of the Entity Type dropdown box
+      </td>
+  <td class="duration">
+    4,577s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        [18:02:12:541]: Click 'Entity Type'<br/>
+
+                                [18:02:12:965]: Click entity type element hardware<br/>
+
+                                [18:02:13:358]: Set entity name:test<br/>
+
+                                [18:02:13:736]: Click 'Submit' button<br/>
+
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CE-8 Check if the Name field works correctly
+      </td>
+  <td class="duration">
+    4,962s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        [18:03:26:681]: Click EntityNameField<br/>
+
+                                [18:03:27:057]: Set entity name:test<br/>
+
+                                [18:03:27:420]: Select random entity type<br/>
+
+                                [18:03:27:855]: Click 'Submit' button<br/>
+
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CE-9 Check if a warning is displayed after you exceeded the maximum number of characters allowed in the Name field
+      </td>
+  <td class="duration">
+    7,710s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        [18:03:12:616]: Click EntityNameField<br/>
+
+                                [18:03:12:975]: Set entity name:lplglectcigbrnetpjrniebpomhqsivutdvcosbuqlokcwippnfsdmelxhidfqggfjxggirmsshvdvkjobvbnnxfcvfhjlpgsdokousdmovmsseronimrtvlrjnbcnfinpthqqspsvmklbohwjsotjjunhxmrsiufcwgrxkwuvosecqkxdddmngdclvuqcsuhuwfndvilritcdwxnwcushhclojwresvnklrrsifxlkmqgligpggrotchqeltdxoqukkfocisilfju<br/>
+
+                                [18:03:13:988]: Click 'Submit' button<br/>
+
+                  </div>
+    
 
       </td>
 </tr>
